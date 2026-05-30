@@ -59,8 +59,8 @@ const App = () => (
             <Route path="/mustahiq" element={<ProtectedLayout><RoleGuard allowedRoles={["super_admin", "admin_kupon"]}><MustahiqPage /></RoleGuard></ProtectedLayout>} />
             <Route path="/distribusi" element={<ProtectedLayout><RoleGuard allowedRoles={["super_admin", "admin_kupon", "admin_hewan"]}><DistribusiPage /></RoleGuard></ProtectedLayout>} />
             <Route path="/laporan" element={<ProtectedLayout><RoleGuard allowedRoles={["super_admin", "admin_keuangan"]}><LaporanPage /></RoleGuard></ProtectedLayout>} />
-            <Route path="*" element={<NotFound />} />
 <Route path="/opg" element={<OpgPage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
