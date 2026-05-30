@@ -23,6 +23,7 @@ import DistribusiPage from "./pages/DistribusiPage";
 import PanitiaPage from "./pages/PanitiaPage";
 import KeuanganPage from "./pages/KeuanganPage";
 import NotFound from "./pages/NotFound";
+import OpgPage from "./pages/OpgPage";
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const App = () => (
             <Route path="/distribusi" element={<ProtectedLayout><RoleGuard allowedRoles={["super_admin", "admin_kupon", "admin_hewan"]}><DistribusiPage /></RoleGuard></ProtectedLayout>} />
             <Route path="/laporan" element={<ProtectedLayout><RoleGuard allowedRoles={["super_admin", "admin_keuangan"]}><LaporanPage /></RoleGuard></ProtectedLayout>} />
             <Route path="*" element={<NotFound />} />
+<Route path="/opg" element={<OpgPage />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
